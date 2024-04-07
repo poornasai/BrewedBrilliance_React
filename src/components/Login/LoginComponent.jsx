@@ -74,7 +74,7 @@ export const LoginComponent = () => {
           </motion.button>
           {/* Button for submitting login */}
           <p>
-            Don't have an account? <a href="#">Sign Up</a>
+            Don't have an account? <a href="/signup">Sign Up</a>
           </p>
           {/* Link for signing up */}
         </motion.form>

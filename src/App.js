@@ -8,6 +8,7 @@ import {
 import Header from "./components/Header";
 import NavBar from "./components/NavBar/NavBar";
 import { LoginComponent } from "./components/Login/LoginComponent";
+import Signup from './components/SignUp/Signup'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<LoginComponent />} />
         <Route path="/home" element={<HomePage />} />
+        <Route path="/signup" element={<Signup/>} />
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
     </Router>
