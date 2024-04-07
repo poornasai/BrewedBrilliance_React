@@ -1,0 +1,231 @@
+/* Navigation Bar Menu Styling & Animations */
+
+/* Navbar styling */
+.navbar {
+    padding: 5px 11%; /* Set padding for the navbar */
+    position: fixed; /* Fix the navbar position */
+    width: 100%; /* Set the width to 100% */
+    top: 15; /* Set the top margin */
+    z-index: 9999; /* Set the stacking order */
+    transition: 0.32s ease-in-out; /* Add transition effect */
+  }
+  
+  /* Styling for scrolled navbar */
+  .navbar.scrolled {
+    padding: 0px 0; /* Remove padding when scrolled */
+    background-color: #121212; /* Change background color when scrolled */
+  }
+  
+  /* Navbar brand link styling */
+  .navbar a.navbar-brand {
+    width: 9%; /* Set width for the navbar brand */
+  }
+  
+  /* Styling for navbar links */
+  .navbar .navbar-nav .nav-link.navbar-link {
+    font-weight: 400; /* Set font weight */
+    color: #fff !important; /* Set text color */
+    letter-spacing: 0.8px; /* Set letter spacing */
+    padding: 0 25px; /* Set padding for links */
+    font-size: 18px; /* Set font size */
+    opacity: 0.75; /* Set opacity */
+    text-decoration: none; /* Removing Underlines if added */
+  }
+  
+  /* Styling for navbar links on hover and when active */
+  .navbar .navbar-nav a.nav-link.navbar-link:hover,
+  .navbar .navbar-nav a.nav-link.navbar-link.active {
+    opacity: 1; /* Set opacity to full on hover and when active */
+  }
+  
+  /* Styling for navbar text */
+  span.navbar-text {
+    display: flex; /* Set display to flex */
+    align-items: center; /* Align items to center */
+  }
+  
+  /* Styling for social icons */
+  .social-icon {
+    display: inline-block; /* Set display to inline-block */
+    margin-left: 14px; /* Set margin */
+  }
+  
+  /* Styling for social icon links */
+  .social-icon a {
+    width: 35px; /* Set width */
+    height: 35px; /* Set height */
+    background: rgba(217, 217, 217, 0.1); /* Set background color */
+    display: inline-flex; /* Set display to inline-flex */
+    border-radius: 50%; /* Set border radius */
+    margin-right: 6px; /* Set margin */
+    align-items: center; /* Align items to center */
+    justify-content: center; /* Justify content to center */
+    line-height: 1; /* Set line height */
+    border: 1px #724e2c; /* Set border */
+  }
+  
+  /* Styling for social icon pseudo elements */
+  .social-icon a::before {
+    content: ""; /* Add content */
+    width: 42px; /* Set width */
+    height: 42px; /* Set height */
+    position: absolute; /* Set position to absolute */
+    background-color: #724e2c; /* Set background color */
+    border-radius: 50%; /* Set border radius */
+    transform: scale(0); /* Scale down */
+    transition: 0.3s ease-in-out; /* Add transition effect */
+  }
+  
+  /* Styling for social icon hover effect */
+  .social-icon a:hover::before {
+    transform: scale(1); /* Scale up on hover */
+  }
+  
+  /* Styling for social icon images */
+  .social-icon a img {
+    width: 40%; /* Set width */
+    z-index: 1; /* Set z-index */
+    transition: 0.3s ease-in-out; /* Add transition effect */
+  }
+  
+  /* Styling for social icon images on hover */
+  .social-icon a:hover img {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%); /* Apply filter on hover */
+  }
+  
+  /* Styling for navbar text button */
+  .navbar-text button {
+    font-weight: 700; /* Set font weight */
+    color: #fff; /* Set text color */
+    border: 1px solid #fff; /* Set border */
+    padding: 14px 34px; /* Set padding */
+    font-size: 14px; /* Set font size */
+    margin-left: 18px; /* Set margin */
+    position: relative; /* Set position */
+    background-color: transparent; /* Set background color */
+    transition: 0.3s ease-in-out; /* Add transition effect */
+  }
+  
+  /* Styling for navbar text button span */
+  .navbar-text button span {
+    z-index: 1; /* Set z-index */
+  }
+  
+  /* Styling for navbar text button pseudo element */
+  .navbar-text button::before {
+    content: ""; /* Add content */
+    width: 0%; /* Set initial width */
+    height: 100%; /* Set height */
+    position: absolute; /* Set position */
+    background-color: #fff; /* Set background color */
+    left: 0; /* Set left position */
+    top: 0; /* Set top position */
+    z-index: -1; /* Set z-index */
+    transition: 0.3s ease-in-out; /* Add transition effect */
+  }
+  
+  /* Styling for navbar text button on hover */
+  .navbar-text button:hover {
+    color: #121212; /* Change text color on hover */
+    background-color: #724e2c; /* Change background color on hover */
+  }
+  
+  /* Styling for navbar text button pseudo element on hover */
+  .navbar-text button:hover::before {
+    content: ""; /* Add content */
+    width: 100%; /* Set width to 100% on hover */
+    height: 100%; /* Set height */
+    position: absolute; /* Set position */
+  }
+  
+  /* Nav Bar Toggler styling */
+  nav.navbar .navbar-toggler:active,
+  nav.navbar .navbar-toggler:focus {
+    outline: none; /* Remove outline on focus */
+    box-shadow: none; /* Remove box shadow */
+  }
+  
+  /* Styling for navbar toggler icon */
+  nav.navbar .navbar-toggler-icon {
+    width: 24px; /* Set width */
+    height: 17px; /* Set height */
+    background-image: none; /* Remove background image */
+    position: relative; /* Set position */
+    border-bottom: 2px solid #fff; /* Add bottom border */
+    transition: all 300ms linear; /* Add transition effect */
+    top: -2px; /* Adjust top position */
+  }
+  
+  /* Styling for navbar toggler icon on focus */
+  nav.navbar .navbar-toggler-icon:focus {
+    border-bottom: 2px solid #fff; /* Change bottom border on focus */
+  }
+  
+  /* Styling for navbar toggler icon pseudo elements */
+  nav.navbar .navbar-toggler-icon:after,
+  nav.navbar .navbar-toggler-icon:before {
+    width: 24px; /* Set width */
+    position: absolute; /* Set position */
+    height: 2px; /* Set height */
+    background-color: #fff; /* Set background color */
+    top: 0; /* Set top position */
+    left: 0; /* Set left position */
+    content: ""; /* Add content */
+    z-index: 2; /* Set z-index */
+    transition: all 300ms linear; /* Add transition effect */
+  }
+  
+  /* Styling for navbar toggler icon after pseudo element */
+  nav.navbar .navbar-toggler-icon:after {
+    top: 8px; /* Adjust top position */
+  }
+  
+  /* Styling for navbar toggler icon when expanded */
+  nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+    transform: rotate(45deg); /* Rotate icon when expanded */
+    background-color: #724e2c; /* Change background color when expanded */
+    height: 2px; /* Set height */
+  }
+  
+  /* Styling for navbar toggler icon before pseudo element when expanded */
+  nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+    transform: translateY(8px) rotate(-45deg); /* Rotate and translate icon when expanded */
+    background-color: #724e2c; /* Change background color when expanded */
+    height: 2px; /* Set height */
+  }
+  
+  /* Styling for navbar toggler icon when expanded */
+  nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    border-color: transparent; /* Change border color when expanded */
+  }
+  
+  /* Re-adjusting the below styles for alignment */
+  .navbar-text {
+    display: flex; /* Set display to flex */
+    align-items: center; /* Align items to center */
+    position: absolute; /* Set position to absolute */
+    top: 0; /* Set top position */
+    right: 15px; /* Set right position */
+    bottom: 0; /* Set bottom position */
+  }
+  
+  /* Styling for social icons alignment */
+  .social-icon {
+    display: flex; /* Set display to flex */
+    align-items: center; /* Align items to center */
+  }
+  
+  /* Styling for social icon links */
+  .social-icon a {
+    margin-right: 6px; /* Set right margin */
+  }
+  
+  /* Adjust margin as needed */
+  .vvd {
+    margin-left: 15px; /* Set left margin */
+  }
+  
+  /* Styling for active navbar links */
+  .active-navbar-link {
+    color: #724e2c !important; /* Set color for active links */
+  }

@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'Love Lady';
+  font-style: normal;
+  font-weight: 900;
+  src: url('./assets/font/love-lady-personal-use-cufonfonts-webfont/LoveLadyPersonalUse.woff');
+  }
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Love Lady";/*"Raleway", sans-serif;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: #d9e2f1;
+  min-height: 100vh;
+}
+
+#main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 10%;
+}
+
+/* Add a hover effect */
+#main-header #title img:hover {
+  transform: scale(1.05); /* Increase size on hover */
+}
+
+#main-header #title  {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+@keyframes float-up-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+#main-header #title img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #724e2c;
+  animation: float-up-down 2s ease-in-out; /* Use float-up-down animation for 3 seconds */
+}
+
+
+
+nav.navbar,
+.social-icon,
+#main-header button {
+  opacity: 0; /* Initially hidden */
+  animation: fade-in 1s ease-in-out forwards; /* Animation to fade in */
+  animation-delay: 1.1s; /* Delay to start after header animations */
+}
+
+/* Keyframes for fading in */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*..Setting font for buttons & body..*/
+button.letsconnect span {
+  font-family: "Love Lady"; /*Using Love Lady font for Let's connect button*/
+}
+
+#main-header button {
+  font-size: 1rem;
+  font-family: "Love Lady";/*"Lato", sans-serif;*/
+  border: none;
+  padding: 0;
+  color: #8c6544;
+  background-color: transparent;
+}
+#main-header button {
+  cursor: pointer;
+}
+
+h1 {
+  font-family: "Love Lady";/*"Lato", sans-serif;*/
+  font-weight: 700;
+  font-size: 1.9rem;
+  margin: 0;
+  color: #724e2c;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
